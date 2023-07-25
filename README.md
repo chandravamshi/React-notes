@@ -22,9 +22,15 @@ don't call hooks in loops, condition or nested fucntions
 ## hooks
 ###  useState
 It is most common hook used. used to update a varialbe with simple steps.  
-retuts a variable with initial value if given and function to udpate the varible.  
-`const [count, setCount] = useState(0)`
+retuts a variable with initial value if given and function to udpate the varible.
+* Example 1  
+`const [count, setCount] = useState(0)`  
+in the above code snippet count is a varialbe with intial value of 0 and setCount is a function.  
 here count is a variable   
 setCount is function 
 `setCount` is a function which takes a callback function.  
-`setCount((prevValue) => prevVlue +1)`  in this setCount will set the value to 1
+`setCount((prevValue) => prevVlue +1)`  in this setCount will set the value to 1  
+* Example 2 with object  
+  `const [obj, setObj] = useState({firstName:'',lastName:''})`  
+  `setObj({...obj, firstName:'Mynam'})` here `...obj` is spread spreading the obj valeus and overriding the firstName. If you don't spread the value of obj will have only `firstName`.
+  
