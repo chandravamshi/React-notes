@@ -32,5 +32,26 @@ setCount is function
 `setCount((prevValue) => prevVlue +1)`  in this setCount will set the value to 1  
 * Example 2 with object  
   `const [obj, setObj] = useState({firstName:'',lastName:''})`  
-  `setObj({...obj, firstName:'Mynam'})` here `...obj` is spread spreading the obj valeus and overriding the firstName. If you don't spread the value of obj will have only `firstName`.
+  `setObj({...obj, firstName:'Mynam'})` here `...obj` is spread spreading the obj valeus and overriding the firstName. If you don't spread the value of obj will have only `firstName`. same goes with arrays.
+
+###  useEffect
+used to perform side effects in FC.  
+it is almost a replacement for componentDidUpdate,componentDidMount, componentDidUnmount in Class Component.  
+runs after every render if no dependencies were given, renders when value of dependencies changes. will also have function insdie to run only before component will be unmounted. if empty array of dependencies provided runs only once only after component mounts.
+return function is runned before component unmounts.
+
+```
+const [test, useTest] = useState(0)  
+
+useEffect(
+()=>{ // perfome something whenever test value changes}
+ return () => 
+ {
+ // perform when component will unmount
+} , [test] )
+``` 
+
+
+
+
   
