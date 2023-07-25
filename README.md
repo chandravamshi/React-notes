@@ -51,6 +51,22 @@ useEffect(
 } , [test] )
 ```   
 ###  useContext
+In simple words, if you want to send variables through mutliple nested components we can use useContext.  
+instead of sending variables as props to components you can simply use useContext hook.  
+useContext provdes a way to pass data through component tree without passing data at each level of the tree.  
+```
+* firt create a Context
+export const TestContext = React.createContext()
+* wrap a component with testContext provider
+<TestContext.Provider value = {'testValue'}>
+<ExampleComponet/>
+<TestContext.Provider/>
+* Inside ExampleComponet
+const testContext = useContext(TestContext)
+return <div>{testContext}</div> // output testValue
+```
+
+
 
 
 
