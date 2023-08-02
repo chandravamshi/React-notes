@@ -68,6 +68,13 @@ const testContext = useContext(TestContext)
 return <div>{testContext}</div> // output testValue
 ```
 
+##  TODO
+### useRef 
+### useMemo 
+### useCallback 
+### useLayoutEffect
+### useImperativeHandle
+
 
 
 
