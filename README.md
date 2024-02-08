@@ -3,7 +3,7 @@ My understanding of react and notes I took during the process of understanding
 
 ---
 
-### Introduction to React
+## Introduction to React
 
 Welcome to the world of React! In this guide, we'll explore the basics of React, including what it is, why it's used, its advantages, and how to get started with it.
 
