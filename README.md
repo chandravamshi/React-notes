@@ -2,6 +2,12 @@
 My understanding of react and notes I took during the process of understanding
 
 ---
+## Table of Contents
+* [Introduction to React](#introduction-to-react)
+* [Breaking User Interfaces into Smaller, Reusable Components](#breaking-user-interfaces-into-smaller-reusable-components-1)
+* [How React's Virtual DOM Works](#how-reacts-virtual-dom-works)
+
+---
 
 ## Introduction to React
 
