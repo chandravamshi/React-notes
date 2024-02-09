@@ -1,4 +1,4 @@
-# react_hooks_notes
+# React Notes
 My Understanding of React and Learning Notes
 
 ---
