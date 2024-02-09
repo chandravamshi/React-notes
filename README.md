@@ -7,6 +7,8 @@ My Understanding of React and Learning Notes
 * [Introduction to React](#introduction-to-react)
 * [Breaking User Interfaces into Smaller, Reusable Components](#breaking-user-interfaces-into-smaller-reusable-components-1)
 * [How React's Virtual DOM Works](#how-reacts-virtual-dom-works)
+* [Creating and Rendering React Components](#creating-and-rendering-react-components)
+* [JSX](#jsx)
 
 
 ---
@@ -287,7 +289,7 @@ class Greeting extends React.Component {
 
 In this example, `Greeting` is a class component that also accepts a `name` prop and returns an `<h1>` element with a greeting message. The `render()` method is required in class components and returns the JSX to be rendered.
 
-#### Creating and Rendering React Components
+#### Mored Detailed Explanation
 
 #### Step 1: Understanding React Components
 
