@@ -149,7 +149,7 @@ This process of using a virtual DOM allows React to efficiently update the UI, r
 
 ---
 
-### 1. Understanding JSX Syntax:
+### JSX 
 
 JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code directly within your JavaScript files. It's not mandatory to use JSX in React, but it's a common and recommended practice because it makes your code more readable and expressive.
 
@@ -246,7 +246,7 @@ In this example, `element` is a JSX element representing a `<div>` containing an
 
 ---
 
-### 2. Creating and Rendering React Components:
+### Creating and Rendering React Components:
 
 In React, components are reusable, self-contained building blocks for your UI. There are two main types of components: functional components and class components.
 
