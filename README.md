@@ -54,7 +54,7 @@ Sure, here's a rewritten version of your understanding of React and the notes yo
    - Experiment with different lifecycle methods to understand when they are invoked and how they can be used.
    - Explore the latest features and best practices in React, such as hooks and context API.
 
-Overall, React provides a powerful and efficient way to build dynamic and interactive user interfaces, and mastering its core concepts is essential for becoming a proficient front-end developer.
+Overall, React provides a powerful and efficient way to build dynamic and interactive user interfaces, and mastering its core concepts is essential for becoming a proficient in react.
 
 --- 
 
