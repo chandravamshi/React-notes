@@ -356,16 +356,6 @@ Functional components are simpler and primarily used for presentational purposes
 - Class components are ES6 classes that extend `React.Component` and have additional features like state and lifecycle methods.
 - Components are rendered by including them in the JSX of another component or using `ReactDOM.render()`.
 
-
----
-
-### Summary:
-
-- JSX allows you to write HTML-like code in your JavaScript files, making your code more readable and expressive.
-- Functional components are simple functions that accept props and return JSX elements. They are lightweight and ideal for presentational components.
-- Class components are ES6 classes that extend `React.Component`. They have additional features like state and lifecycle methods, making them suitable for more complex components.
-
-
 ---
 ## What are hooks and why hooks ?
 It is a new feature from react 16.8 which allow you to use react features without writing a class.  
