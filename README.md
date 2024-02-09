@@ -7,7 +7,7 @@ My Understanding of React and Learning Notes
 * [Introduction to React](#introduction-to-react)
 * [Breaking User Interfaces into Smaller, Reusable Components](#breaking-user-interfaces-into-smaller-reusable-components-1)
 * [How React's Virtual DOM Works](#how-reacts-virtual-dom-works)
-* * [JSX](#jsx)
+* [JSX](#jsx)
 * [Creating and Rendering React Components](#creating-and-rendering-react-components)
 
 ---
