@@ -16,7 +16,7 @@ Sure, here's a rewritten version of your understanding of React and the notes yo
 
 ---
 
-## Basic short intro to React
+## Short intro to React
 1. **Introduction to React:**
    - React is a JavaScript library for building user interfaces.
    - It allows us to create reusable UI components that update efficiently when data changes.
