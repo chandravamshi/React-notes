@@ -146,7 +146,6 @@ Let's break down how React's virtual DOM works step by step, using a simple exam
 
 This process of using a virtual DOM allows React to efficiently update the UI, resulting in better performance, especially for complex applications with dynamic content.
 
-
 ---
 
 ### JSX 
@@ -246,7 +245,7 @@ In this example, `element` is a JSX element representing a `<div>` containing an
 
 ---
 
-### Creating and Rendering React Components:
+## Creating and Rendering React Components
 
 In React, components are reusable, self-contained building blocks for your UI. There are two main types of components: functional components and class components.
 
@@ -271,11 +270,24 @@ ReactDOM.render(
 
 In this example, `Greeting` is a functional component that accepts a `name` prop and returns an `<h1>` element with a greeting message.
 
-Certainly! Here's the content formatted as a section in a README file:
+#### Class Components:
 
----
+Class components are ES6 classes that extend `React.Component`. They have additional features like state and lifecycle methods, making them suitable for more complex components that need to manage their own state or perform side effects.
 
-## Creating and Rendering React Components
+#### Example:
+
+```jsx
+// Class Component Example
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+```
+
+In this example, `Greeting` is a class component that also accepts a `name` prop and returns an `<h1>` element with a greeting message. The `render()` method is required in class components and returns the JSX to be rendered.
+
+#### Creating and Rendering React Components
 
 #### Step 1: Understanding React Components
 
@@ -346,24 +358,6 @@ Functional components are simpler and primarily used for presentational purposes
 
 
 ---
-
-
-#### Class Components:
-
-Class components are ES6 classes that extend `React.Component`. They have additional features like state and lifecycle methods, making them suitable for more complex components that need to manage their own state or perform side effects.
-
-#### Example:
-
-```jsx
-// Class Component Example
-class Greeting extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
-}
-```
-
-In this example, `Greeting` is a class component that also accepts a `name` prop and returns an `<h1>` element with a greeting message. The `render()` method is required in class components and returns the JSX to be rendered.
 
 ### Summary:
 
