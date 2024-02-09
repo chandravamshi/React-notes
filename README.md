@@ -1,5 +1,5 @@
 # react_hooks_notes
-My understanding of react and notes I took during the process of understanding
+My Understanding of React and Learning Notes
 
 ---
 ## Table of Contents
