@@ -9,11 +9,6 @@ My Understanding of React and Learning Notes
 * [How React's Virtual DOM Works](#how-reacts-virtual-dom-works)
 * [JSX](#jsx)
 * [Creating and Rendering React Components](#creating-and-rendering-react-components)
-
----
-
-Sure, here's a rewritten version of your understanding of React and the notes you took during the learning process:
-
 ---
 
 ## Short intro to React
