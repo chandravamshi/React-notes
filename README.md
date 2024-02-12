@@ -352,6 +352,100 @@ Functional components are simpler and primarily used for presentational purposes
 - Class components are ES6 classes that extend `React.Component` and have additional features like state and lifecycle methods.
 - Components are rendered by including them in the JSX of another component or using `ReactDOM.render()`.
 
+
+---
+
+###  Props and State in React
+
+#### Step 1: Understanding Props
+
+Props (short for properties) are a way to pass data from a parent component to a child component in React. They allow you to customize and configure a component's behavior and appearance.
+
+#### Example:
+
+```jsx
+// Parent Component
+function ParentComponent() {
+  return <ChildComponent name="John" />;
+}
+
+// Child Component
+function ChildComponent(props) {
+  return <p>Hello, {props.name}!</p>;
+}
+```
+
+In this example, the `ParentComponent` passes the `name` prop with the value `"John"` to the `ChildComponent`.
+
+#### Step 2: Passing Data with Props
+
+Props are passed as attributes in JSX when you render a component. The child component can access props through its function arguments.
+
+#### Step 3: Understanding State
+
+State represents the data that a component manages internally. It allows components to keep track of changing data and re-render when the state updates.
+
+#### Example:
+
+```jsx
+// Class Component with State
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+}
+```
+
+In this example, the `Counter` component manages its internal state with a `count` variable.
+
+#### Step 4: Managing State with Hooks
+
+In functional components, you can manage state using the `useState` hook provided by React. This hook allows you to add state to functional components without needing to use classes.
+
+#### Example:
+
+```jsx
+// Functional Component with State using useState Hook
+function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+#### Step 5: Behind the Scenes - State Management
+
+Behind the scenes, React uses a reconciliation algorithm to efficiently update the UI when state changes. React compares the previous state with the new state to determine what parts of the UI need to be updated.
+
+#### Step 6: Updating State
+
+State can be updated using the `setState` method in class components or the setter function returned by the `useState` hook in functional components. When state is updated, React automatically re-renders the component to reflect the changes.
+
+#### Summary:
+
+- Props allow you to pass data from parent to child components.
+- State represents the internal data managed by a component.
+- Class components use the `setState` method to manage state, while functional components use the `useState` hook.
+- React efficiently updates the UI when state changes using a reconciliation algorithm.
+
+
 ---
 ## What are hooks and why hooks ?
 It is a new feature from react 16.8 which allow you to use react features without writing a class.  
