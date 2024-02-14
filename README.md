@@ -517,8 +517,6 @@ Behind the scenes, React uses event delegation to handle events efficiently. Whe
 - You can update component state based on user interactions to dynamically change the UI.
 - React uses event delegation to handle events efficiently.
 
-Feel free to copy and paste this content into your README file on GitHub. Let me know if you need further clarification or have any questions!
-
 ---
 ## What are hooks and why hooks ?
 It is a new feature from react 16.8 which allow you to use react features without writing a class.  
