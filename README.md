@@ -10,6 +10,7 @@ My Understanding of React and Learning Notes
 * [JSX](#jsx)
 * [Creating and Rendering React Components](#creating-and-rendering-react-components)
 * [Props and State in React](#props-and-state-in-react)
+* [Handling Events in React](#handling-events-in-react)
 ---
 
 ## Short intro to React
@@ -448,8 +449,6 @@ State can be updated using the `setState` method in class components or the sett
 
 
 ---
-
-Certainly! Let's delve into the topic of handling events in React, covering everything from the basics to more advanced concepts, including behind-the-scenes explanations.
 
 ### Handling Events in React
 
