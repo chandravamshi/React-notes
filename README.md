@@ -11,6 +11,7 @@ My Understanding of React and Learning Notes
 * [Creating and Rendering React Components](#creating-and-rendering-react-components)
 * [Props and State in React](#props-and-state-in-react)
 * [Handling Events in React](#handling-events-in-react)
+* [Lists and Keys in React](#lists-and-keys-in-react)
 ---
 
 ## Short intro to React
