@@ -603,7 +603,7 @@ When React renders a list of elements, it uses the `key` prop to efficiently upd
 
 In React, you can use conditional statements such as `if`, `else`, and ternary operators (`? :`) to conditionally render components based on certain conditions.
 
-Example:
+**Example:**
 
 ```jsx
 function Greeting({ isLoggedIn }) {
@@ -621,7 +621,7 @@ In this example, the `Greeting` component renders different messages based on th
 
 You can toggle the visibility of components based on component state. By updating the state, you can show or hide certain components in the UI.
 
-Example:
+**Example:**
 
 ```jsx
 function ToggleComponent() {
@@ -646,7 +646,7 @@ In this example, clicking the "Toggle" button toggles the visibility of the `<p>
 
 When conditionally rendering components in React, only the necessary components are included in the virtual DOM. React efficiently updates the DOM based on changes in component state or props, ensuring optimal performance.
 
-Summary:
+**Summary:**
 
 - Conditional rendering in React allows you to show or hide components based on certain conditions using conditional statements.
 - Toggling component visibility based on state enables dynamic UI behavior where components can appear or disappear based on user interactions or other factors.
