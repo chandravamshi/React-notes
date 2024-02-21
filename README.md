@@ -12,7 +12,7 @@ My Understanding of React and Learning Notes
 * [Props and State](#props-and-state-in-react)
 * [Handling Events](#handling-events-in-react)
 * [Lists and Keys](#lists-and-keys-in-react)
-* [Conditional Rendering](#)
+* [Conditional Rendering](##conditional-rendering)
 ---
 
 ## Short intro to React
@@ -597,7 +597,7 @@ When React renders a list of elements, it uses the `key` prop to efficiently upd
 
 ---
 
-### Conditional Rendering in React
+### Conditional Rendering
 
 #### Step 1: Using Conditional Statements to Render Components Conditionally
 
