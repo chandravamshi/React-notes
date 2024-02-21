@@ -8,10 +8,11 @@ My Understanding of React and Learning Notes
 * [Breaking User Interfaces into Smaller, Reusable Components](#breaking-user-interfaces-into-smaller-reusable-components-1)
 * [How React's Virtual DOM Works](#how-reacts-virtual-dom-works)
 * [JSX](#jsx)
-* [Creating and Rendering React Components](#creating-and-rendering-react-components)
-* [Props and State in React](#props-and-state-in-react)
-* [Handling Events in React](#handling-events-in-react)
-* [Lists and Keys in React](#lists-and-keys-in-react)
+* [Creating and Rendering Components](#creating-and-rendering-react-components)
+* [Props and State](#props-and-state-in-react)
+* [Handling Events](#handling-events-in-react)
+* [Lists and Keys](#lists-and-keys-in-react)
+* [Conditional Rendering](#)
 ---
 
 ## Short intro to React
@@ -595,8 +596,6 @@ When React renders a list of elements, it uses the `key` prop to efficiently upd
 - Behind the scenes, React uses the `key` prop to efficiently update the DOM when rendering lists of elements.
 
 ---
-
-Certainly! Let's explore the topic of conditional rendering in React, covering everything from the basics to more advanced concepts, including behind-the-scenes explanations.
 
 ### Conditional Rendering in React
 
