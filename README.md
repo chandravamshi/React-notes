@@ -656,7 +656,7 @@ When conditionally rendering components in React, only the necessary components 
 ---
 
 
-### #forms-and-controlled-components-in-react
+### Forms and Controlled Components
 
 **Step 1: Handling Form Inputs in React**
 
@@ -750,15 +750,15 @@ function LoginForm() {
 
 In this example, the form data is managed as an object in state (`formData`). The `handleChange` function updates the corresponding property in `formData` whenever an input value changes.
 
-### Step 3: Form Submission and Validation
+**Step 3: Form Submission and Validation**
 
 React provides various techniques for handling form submission and validation, including preventing default behavior (`event.preventDefault()`), client-side validation using state and conditions, and library solutions like Formik and Yup for more complex scenarios.
 
-### Step 4: Behind the Scenes - Controlled Components
+**Step 4: Behind the Scenes - Controlled Components**
 
 Behind the scenes, React tracks the state of each controlled component and updates the UI accordingly. When an input value changes, React re-renders the component with the updated value, ensuring a consistent and controlled user experience.
 
-### Summary:
+**Summary:**
 
 - Forms in React are managed as controlled components, where input values are controlled by React state.
 - Managing form state allows for features like validation, dynamic updates, and controlled behavior.
