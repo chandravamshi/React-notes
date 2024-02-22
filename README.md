@@ -13,7 +13,7 @@ My Understanding of React and Learning Notes
 * [Handling Events](#handling-events-in-react)
 * [Lists and Keys](#lists-and-keys-in-react)
 * [Conditional Rendering](#conditional-rendering)
-* [#forms-and-controlled-components-in-react](#forms-and-controlled-components)
+* [Forms and Controlled Components](#forms-and-controlled-components)
 ---
 
 ## Short intro to React
