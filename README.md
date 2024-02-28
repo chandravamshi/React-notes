@@ -14,6 +14,7 @@ My Understanding of React and Learning Notes
 * [Lists and Keys](#lists-and-keys-in-react)
 * [Conditional Rendering](#conditional-rendering)
 * [Forms and Controlled Components](#forms-and-controlled-components)
+* [Lifecycle Methods in Class Components](#lifecycle-methods-in-class-components)
 ---
 
 ## Short intro to React
@@ -765,7 +766,77 @@ Behind the scenes, React tracks the state of each controlled component and updat
 - React provides various techniques for form submission and validation, including event handling, state management, and library solutions.
 - Controlled components in React ensure a consistent and controlled user experience by tracking input values and updating the UI accordingly.
 
+---
 
+### Lifecycle Methods in Class Components
+
+Step 1: Understanding Lifecycle Methods in Class Components
+
+In React class components, lifecycle methods are special methods that are automatically invoked at various stages of a component's lifecycle. These methods allow you to perform certain actions or operations at specific points during the component's existence.
+
+Example:
+
+```jsx
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    // Constructor: Initialize state and bind methods
+  }
+
+  componentDidMount() {
+    // componentDidMount: Called after the component is mounted (added to the DOM)
+    // Perform actions like fetching data from an API
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // componentDidUpdate: Called after the component's state or props are updated
+    // Perform actions based on state/props changes
+  }
+
+  componentWillUnmount() {
+    // componentWillUnmount: Called just before the component is unmounted and destroyed
+    // Clean up tasks like removing event listeners or subscriptions
+  }
+
+  render() {
+    // Render method: Return the component's UI
+    return (
+      <div>
+        {/* Component UI */}
+      </div>
+    );
+  }
+}
+```
+
+In this example, we have defined several lifecycle methods within a class component. Each method serves a specific purpose and is invoked automatically by React at different stages of the component's lifecycle.
+
+Step 2: Component Lifecycle Phases: Mounting, Updating, and Unmounting
+
+React class components go through three main lifecycle phases: Mounting, Updating, and Unmounting.
+
+- **Mounting**: Occurs when the component is first created and added to the DOM.
+  - `constructor`: Initializes state and binds methods.
+  - `componentDidMount`: Invoked after the component is mounted. Ideal for performing tasks like data fetching.
+
+- **Updating**: Occurs when the component's state or props change.
+  - `componentDidUpdate`: Invoked after the component's state or props are updated. Useful for responding to changes and performing side effects.
+
+- **Unmounting**: Occurs when the component is removed from the DOM.
+  - `componentWillUnmount`: Invoked just before the component is unmounted and destroyed. Used for cleanup tasks like removing event listeners or subscriptions.
+
+Step 3: Behind the Scenes - Lifecycle Methods Execution
+
+Behind the scenes, React manages the execution of lifecycle methods to ensure proper initialization, updating, and cleanup of components. These methods provide developers with hooks to perform tasks at specific points in the component's lifecycle, enabling better control and management of application behavior.
+
+Summary:
+
+- Lifecycle methods in React class components allow you to perform actions at specific stages of the component's lifecycle.
+- The three main phases of the component lifecycle are Mounting, Updating, and Unmounting.
+- Lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` provide hooks for performing tasks such as data fetching, responding to state changes, and cleanup.
+- React manages the execution of lifecycle methods behind the scenes to ensure proper initialization, updating, and cleanup of components.
 
 ---
 
