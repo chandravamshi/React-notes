@@ -839,6 +839,8 @@ Summary:
 - Lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` provide hooks for performing tasks such as data fetching, responding to state changes, and cleanup.
 - React manages the execution of lifecycle methods behind the scenes to ensure proper initialization, updating, and cleanup of components.
 
+[Top](#table-of-contents)
+
 ---
 
 
@@ -917,7 +919,8 @@ Summary:
 - While hooks offer numerous advantages, they may also have a learning curve and require adjustments to existing codebases.
 - Understanding how hooks work behind the scenes can help developers leverage their power effectively while building React applications.
 
-[Table of Contents](#table-of-contents)
+[Top](#table-of-contents)
+
 ---
 
 ## What are hooks and why hooks ?
