@@ -19,6 +19,7 @@ My Understanding of React and Learning Notes
      * [useState](#useState)
      * [useEffect](#useEffect-hook)
      * [Context and useContext Hook](#context-and-useContext-hook)
+     * [useReducer](#useReducer)
 ---
 
 ## Short intro to React
