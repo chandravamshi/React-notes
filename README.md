@@ -1418,3 +1418,138 @@ export default Counter;
 [Top](#table-of-contents)
 
 ---
+
+Using `useCallback` with `setCount` can help prevent unnecessary re-creations of the callback function, which can be beneficial in certain scenarios, particularly with performance optimizations. Here's a comparison between the two approaches:
+
+**Without `useCallback`:**
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+**With `useCallback`:**
+```jsx
+import React, { useState, useCallback } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(() => {
+    setCount((prevCount) => prevCount + 1);
+  }, []);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={increment}>Click me</button>
+    </div>
+  );
+}
+```
+
+**Comparison:**
+
+1. **Without `useCallback`**:
+    - **Function Creation**: The inline function inside the `onClick` is recreated on every render.
+    - **Re-rendering**: The button receives a new function reference each time the component re-renders, which can cause the button itself to re-render, even if it doesn't need to.
+
+2. **With `useCallback`**:
+    - **Function Creation**: The `increment` function is memoized, meaning it is only created once and re-used for subsequent renders as long as its dependencies (in this case, an empty array) don't change.
+    - **Re-rendering**: The button receives the same function reference for `onClick` across renders, which can reduce unnecessary re-renders and improve performance.
+
+**Behind the Scenes:**
+- **Without `useCallback`**: 
+  - Each render generates a new function for `onClick`.
+  - This can lead to performance issues if the component tree is large, as React will have to reconcile more changes.
+
+- **With `useCallback`**: 
+  - The `increment` function is created once and maintained across renders.
+  - The empty dependency array `[]` ensures that the function doesn't change, preventing unnecessary re-renders of the button component.
+
+**Example with Dependency:**
+If you had dependencies, `useCallback` would ensure the function updates only when those dependencies change.
+
+```jsx
+const increment = useCallback(() => {
+  setCount((prevCount) => prevCount + 1);
+}, [dependency]);
+```
+
+**Practical Difference:**
+- **Performance Optimization**: `useCallback` can help avoid re-creating functions and reduce unnecessary rendering in larger applications or complex component trees.
+- **Code Consistency**: `useCallback` can make it clearer that the function should not change unless its dependencies change, providing more predictable and maintainable code.
+
+In summary, using `useCallback` can optimize rendering behavior by preventing unnecessary function recreations, which can be particularly beneficial in performance-critical applications.
+
+Even when you use `useCallback`, the component will still re-render to update the value of `count`. Here’s a step-by-step explanation:
+
+1. **State Update with `setCount`**:
+   - When the `increment` function is called (which happens when the button is clicked), it triggers `setCount`.
+   - `setCount` updates the state variable `count`.
+
+2. **Triggering a Re-render**:
+   - Whenever a state update occurs, React re-renders the component to reflect the new state.
+   - This is true regardless of whether the state update function (`setCount`) is called from within a `useCallback` hook or directly.
+
+3. **Effect of `useCallback`**:
+   - The purpose of `useCallback` is to memoize the function `increment` so that the same function instance is used across renders as long as its dependencies (in this case, an empty array `[]`, meaning no dependencies) don’t change.
+   - This optimization prevents the `increment` function from being recreated on every render, but it doesn’t stop the component from re-rendering when state changes.
+
+**Example with `useCallback`:**
+```jsx
+import React, { useState, useCallback } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(() => {
+    setCount((prevCount) => prevCount + 1);
+  }, []);
+
+  console.log('Component rendered');
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={increment}>Click me</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+**How It Works:**
+- **Initial Render**:
+  - The component renders for the first time.
+  - `increment` is created and memoized using `useCallback`.
+  - `console.log('Component rendered')` is executed.
+
+- **Button Click**:
+  - When the button is clicked, `increment` is called.
+  - `increment` calls `setCount`, which updates `count`.
+  - The state change triggers a re-render of the `Counter` component.
+
+- **Subsequent Renders**:
+  - On each re-render, `useCallback` ensures the same `increment` function instance is used.
+  - `console.log('Component rendered')` is executed again, indicating a re-render.
+
+**Key Points:**
+- **Re-renders Still Happen**: The component will still re-render to reflect the updated state.
+- **Function Memoization**: `useCallback` helps in scenarios where the function would otherwise be recreated on every render, which can prevent unnecessary child component re-renders if those child components rely on the function as a prop.
+- **Performance Optimization**: While `useCallback` helps with performance by memoizing functions, it doesn't change the fundamental behavior of state updates causing re-renders.
+
+So, in summary, using `useCallback` with `setCount` helps optimize function instances but does not prevent the component from re-rendering when the state is updated.
+
+[Top](#table-of-contents)
+
+
+---
