@@ -84,6 +84,8 @@ Behind the scenes, React manages the state and lifecycle of components using hoo
 10. **useDebugValue**: Adds a label to custom hooks for easier debugging in React DevTools.
 11. useTransition()
 12. useDefferedValue()
+13. useId()
+14. useDebugValue()
 
 These are some of the most commonly used React hooks that cover a wide range of functionalities. Familiarizing yourself with these hooks will enable you to build robust and efficient React applications.
 
